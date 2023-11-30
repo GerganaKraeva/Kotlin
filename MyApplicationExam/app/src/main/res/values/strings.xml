@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application Exam</string>
+    <string name="my_notes">MY NOTES</string>
+    <string name="create_note">Create Note</string>
+    <string name="enter_note">Enter note</string>
+    <string name="save_notes">Save Notes</string>
+    <string name="show_save_notes">Show Save Notes</string>
+    <string name="show_saved_note">Show Saved Note</string>
+</resources>

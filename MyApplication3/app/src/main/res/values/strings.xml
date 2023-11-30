@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="saved_data_will_load_here">Saved data will load here...</string>
+    <string name="save_data">Save Data</string>
+    <string name="enter_data_to_save">Enter data to save...</string>
+    <string name="load_data">Load Data</string>
+    <string name="load_previous_data">load_previous_data</string>
+    <string name="next_screen">Next screen</string>
+    <string name="clear_data">clear data</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application-BE</string>
+    <string name="task_manager">TASK MANAGER</string>
+    <string name="current_tasks">Current tasks:</string>
+    <string name="enter_task_index">Enter task index</string>
+    <string name="confirm">Confirm</string>
+    <string name="create_new_task">Create New Task</string>
+    <string name="create_new_task_title">Create new task title</string>
+    <string name="task_name">Task Name:</string>
+    <string name="enter_task_name">Enter task name</string>
+    <string name="task_description">Task description</string>
+    <string name="save_task">Save task</string>
+    <string name="enter_task_description">Enter task description</string>
+    <string name="review_task">Review Task</string>
+    <string name="complete_task">Complete task</string>
+</resources>

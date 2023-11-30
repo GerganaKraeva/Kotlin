@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LocalStorageHomework_problem1</string>
+    <string name="welcome_to_my_app">Welcome to my app!</string>
+    <string name="enter_text">Enter text</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+</resources>
