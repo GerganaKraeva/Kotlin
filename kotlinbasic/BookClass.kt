@@ -1,5 +1,5 @@
 package com.example.kotlinbasic
 
-class Book (val title: String, val author: String, val yearPublished: Int ){
+class Book (var title: String = "Unknown", val author: String = "Anonymous", val yearPublished: Int = 2024 ){
 
 }
