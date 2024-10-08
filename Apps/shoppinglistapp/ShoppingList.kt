@@ -38,8 +38,8 @@ import androidx.compose.ui.unit.dp
 
 data class ShoppingItem(
     val id: Int,
-    val name: String,
-    val quantity: Int,
+    var name: String,
+    var quantity: Int,
     val isEditing: Boolean = false
 )
 
@@ -68,7 +68,24 @@ fun shoppingListApp() {
                 .padding(16.dp)
         ) {
             items(sItems) {
-                ShoppingListItem(it, {}, {})
+                    item ->
+                if (item.isEditing) {
+                    ShoppingItemEditor(item = item, onEditComplete = {
+                            editedName, editedQuantity ->
+                        sItems = sItems.map { it.copy(isEditing = false) }
+                        val editedItem = sItems.find { it.id == item.id }
+                        editedItem?.let{
+                            it.name = editedName
+                            it.quantity = editedQuantity
+                        }
+                    })
+                } else {
+                    ShoppingListItem(item = item, onEditClick = {
+                        sItems = sItems.map { it.copy(isEditing =  it.id == item.id) }
+                    }, onDeleteClick = {
+                        sItems =sItems - item
+                    })
+                }
             }
         }
 
@@ -142,7 +159,8 @@ fun ShoppingListItem(
             .border(
                 border = BorderStroke(2.dp, Color(0XFF018786)),
                 shape = RoundedCornerShape(20)
-            )
+            ),
+        horizontalArrangement =  Arrangement.SpaceBetween
     ) {
         Text(text = item.name, modifier = Modifier.padding(8.dp))
         Text(text = "Qty: ${item.quantity}", modifier = Modifier.padding(8.dp))
@@ -184,7 +202,7 @@ fun ShoppingItemEditor(item: ShoppingItem, onEditComplete: (String, Int) -> Unit
 
             BasicTextField(
                 value = editedQuantity,
-                onValueChange = { editedName = it },
+                onValueChange = { editedQuantity = it },
                 singleLine = true,
                 modifier = Modifier
                     .wrapContentSize()
