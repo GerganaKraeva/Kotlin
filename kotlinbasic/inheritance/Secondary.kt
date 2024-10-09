@@ -3,7 +3,7 @@ package com.example.inheritance
 //Derived Class of BaseClass
 //Inherits from the BaseClass
 
-class Secondary: BaseClass (){
+ open  class Secondary: BaseClass (){
 
     override fun role() {
 //        super.role()
