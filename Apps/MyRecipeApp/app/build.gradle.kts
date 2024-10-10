@@ -50,8 +50,6 @@ android {
 }
 
 dependencies {
-//    def lifecycle_version = "2.8.6"
-//    def arch_version = "2.2.0"
     //Compose ViewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
 
@@ -59,7 +57,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     //Json to Kotlin object mapping
-    implementation("com.squareup.retrofit2:convert-gson:2.9.0")
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
     //Image loading
     implementation("io.coil-kt:coil-compose:2.4.0")
