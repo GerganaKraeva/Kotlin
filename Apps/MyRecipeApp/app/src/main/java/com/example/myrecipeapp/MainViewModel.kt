@@ -15,7 +15,7 @@ class MainViewModel: ViewModel() {
     init {
         fetchCategories()
     }
-    
+
     private  fun fetchCategories() {
         viewModelScope.launch {
             try {
