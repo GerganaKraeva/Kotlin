@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -50,8 +51,12 @@ android {
 }
 
 dependencies {
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.8.3")
+
     //Compose ViewModel
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0-alpha04")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0-alpha04")
 
     //Network calls
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
